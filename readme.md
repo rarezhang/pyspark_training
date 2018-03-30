@@ -1,7 +1,7 @@
 # PySpark  
-[Tutorial](https://www.tutorialspoint.com/pyspark/index.htm)
-[Introduction](https://www.tutorialspoint.com/pyspark/pyspark_quick_guide.htm) 
-[pyspark examples](https://github.com/apache/spark/tree/master/examples/src/main/python)
+[Tutorial](https://www.tutorialspoint.com/pyspark/index.htm)  
+[Introduction](https://www.tutorialspoint.com/pyspark/pyspark_quick_guide.htm)  
+[pyspark examples](https://github.com/apache/spark/tree/master/examples/src/main/python)  
 
 
 ## Introduction
@@ -16,7 +16,7 @@
 - written in Scala & support Python with PySpark     
 
 
-## pyspark configurations and parameters 
+## Configurations and parameters 
 - provides configurations to run a Spark application  
 ```python
 class pyspark.SparkConf (
@@ -75,14 +75,14 @@ e.g., filter, groupBy and map
 operations applied on RDD  
 instructs Spark to perform computation and send the result back to the driver  
 
-[count.py](count.py)  # number of elements in the RDD is returned  
-[collect.py](collect.py)  # all the elements in the RDD are returned  
-[foreach](foreach.py)  # Returns only those elements which meet the condition of the function inside foreach  
-[filter.py](filter.py)  # a new RDD is returned containing the elements, which satisfies the function inside the filter  
-[map.py](map.py)  # a new RDD is returned: applying a function to each element in the RDD  
-[reduce.py](reduce.py)  # After performing the specified commutative and associative binary operation, the element in the RDD is returned  
-[join.py](join.py)  # returns RDD with a pair of elements with the matching keys and all the values for that particular key  
-[cache.py](cache.py)  # Persist this RDD with the default storage level (MEMORY_ONLY). You can also check if the RDD is cached or not.  
+[count.py](simple_examples/count.py)  # number of elements in the RDD is returned  
+[collect.py](simple_examples/collect.py)  # all the elements in the RDD are returned  
+[foreach](simple_examples/foreach.py)  # Returns only those elements which meet the condition of the function inside foreach  
+[filter.py](simple_examples/filter.py)  # a new RDD is returned containing the elements, which satisfies the function inside the filter  
+[map.py](simple_examples/map.py)  # a new RDD is returned: applying a function to each element in the RDD  
+[reduce.py](simple_examples/reduce.py)  # After performing the specified commutative and associative binary operation, the element in the RDD is returned  
+[join.py](simple_examples/join.py)  # returns RDD with a pair of elements with the matching keys and all the values for that particular key  
+[cache.py](simple_examples/cache.py)  # Persist this RDD with the default storage level (MEMORY_ONLY). You can also check if the RDD is cached or not.  
 
 
 ## parallel processing  
@@ -144,7 +144,7 @@ class pyspark.StorageLevel(useDisk, useMemory, useOffHeap, deserialized, replica
     
 
 
-[storagelevel.py](storagelevel.py)
+[storagelevel.py](simple_examples/storagelevel.py)
 
 
 ## Machine Learning API  
@@ -179,4 +179,4 @@ class pyspark.MarshalSerializer
 class pyspark.PickleSerializer
 ```
 
-[serializing.py](serializing.py)  # serialize the data using MarshalSerializer
+[serializing.py](simple_examples/serializing.py)  # serialize the data using MarshalSerializer
