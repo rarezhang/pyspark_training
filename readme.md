@@ -156,7 +156,8 @@ class pyspark.StorageLevel(useDisk, useMemory, useOffHeap, deserialized, replica
     **spark.mllib** - It ¬currently supports model-based collaborative filtering, in which users and products are described by a small set of latent factors that can be used to predict missing entries. spark.mllib uses the Alternating Least Squares (ALS) algorithm to learn these latent factors.  
     **mllib.regression** - Regression algorithms: find relationships and dependencies between variables. The interface for working with linear regression models and model summaries is similar to the logistic regression case.  
 
-
+[recommend.py](simple_examples/recommend.py)
+    
 ## Serializers  
 - used for performance tuning (plays an important role in costly operations)  
 - all data that is sent over the network or written to the disk or persisted in the memory should be serialized  
