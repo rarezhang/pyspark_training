@@ -58,7 +58,7 @@ class pyspark.SparkContext (
    profiler_cls = <class 'pyspark.profiler.BasicProfiler'>  # a class of custom Profiler used to do profiling (the default is pyspark.profiler.BasicProfiler)  
 )
 ```
-[firstapp.py](simple_examples/firstapp.py)
+[spark_context.py](simple_examples/spark_context.py)
 
 
 ## RDD  
@@ -100,7 +100,7 @@ class pyspark.Broadcast (
    path = None
 )
 ```
-[broadcast.py](broadcast.py)  # how to use a Broadcast variable  
+[broadcast.py](simple_examples/broadcast.py)  # how to use a Broadcast variable  
 
 ### accumulator  
 - aggregating the information through associative and commutative operations  
@@ -108,6 +108,7 @@ class pyspark.Broadcast (
 ```python 
 class pyspark.Accumulator(aid, value, accum_param)
 ```
+[accumulator.py](simple_examples/accumulator.py)
 
 
 ## files  
@@ -116,7 +117,7 @@ class pyspark.Accumulator(aid, value, accum_param)
 - ```SparkContext.addFile(path_to_file)``` : resolve the paths to files  
     + ```get(filename)```  # specifies the path of the file that is added through SparkContext.addFile()  
     + ```getRootDirectory()```  : specifies the path to the root directory, which contains the file that is added through the SparkContext.addFile()  
-    
+[sparkfile.py](simple_examples/sparkfile.py)
 
 ## storage
 - how RDD should be stored:  
@@ -142,9 +143,7 @@ class pyspark.StorageLevel(useDisk, useMemory, useOffHeap, deserialized, replica
     MEMORY_ONLY_SER_2 = StorageLevel(False, True, False, False, 2)  
     OFF_HEAP = StorageLevel(True, True, True, False, 1)  
     
-
-
-[storagelevel.py](simple_examples/storagelevel.py)
+[storagelevel.py](simple_examples/storagelevel.py)  
 
 
 ## Machine Learning API  
