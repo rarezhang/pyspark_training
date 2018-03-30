@@ -117,6 +117,8 @@ class pyspark.Accumulator(aid, value, accum_param)
 - ```SparkContext.addFile(path_to_file)``` : resolve the paths to files  
     + ```get(filename)```  # specifies the path of the file that is added through SparkContext.addFile()  
     + ```getRootDirectory()```  : specifies the path to the root directory, which contains the file that is added through the SparkContext.addFile()  
+    
+    
 [sparkfile.py](simple_examples/sparkfile.py)
 
 ## storage
