@@ -85,11 +85,13 @@ instructs Spark to perform computation and send the result back to the driver
 [cache.py](simple_examples/cache.py)  # Persist this RDD with the default storage level (MEMORY_ONLY). You can also check if the RDD is cached or not.  
 
 
-## parallel processing  
+
+
+## Parallel processing  
 - Spark uses shared variables for **parallel processing**  
 
 2 types of shared variables:  
-### broadcast  
+### Broadcast  
 - save the copy of data across all nodes  
 - cached on all the machines and not sent on machines with tasks   
 ```python
@@ -102,7 +104,7 @@ class pyspark.Broadcast (
 ```
 [broadcast.py](simple_examples/broadcast.py)  # how to use a Broadcast variable  
 
-### accumulator  
+### Accumulator  
 - aggregating the information through associative and commutative operations  
 - use an accumulator for a sum operation or counters (in MapReduce)  
 ```python 
@@ -111,7 +113,7 @@ class pyspark.Accumulator(aid, value, accum_param)
 [accumulator.py](simple_examples/accumulator.py)
 
 
-## files  
+## Files  
 - ```sc.addFile(path_to_file)``` : upload files (sc = SparkContext)  
 - ```SparkFiles.get(file_name)``` : get the path on a worker  
 - ```SparkContext.addFile(path_to_file)``` : resolve the paths to files  
@@ -121,7 +123,7 @@ class pyspark.Accumulator(aid, value, accum_param)
     
 [sparkfile.py](simple_examples/sparkfile.py)
 
-## storage
+## Storage
 - how RDD should be stored:  
     + memory  
     + disk  
